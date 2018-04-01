@@ -1,0 +1,14 @@
+C:\Users\npofa\source\repos\Editor\Editor\bin\Debug\Editor.exe.config
+C:\Users\npofa\source\repos\Editor\Editor\bin\Debug\Editor.exe
+C:\Users\npofa\source\repos\Editor\Editor\bin\Debug\Editor.pdb
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.Form1.resources
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.Properties.Resources.resources
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.csproj.GenerateResource.cache
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.csproj.CoreCompileInputs.cache
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.exe
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.pdb
+C:\Users\npofa\source\repos\Editor\Editor\bin\Debug\FigurePlugins.dll
+C:\Users\npofa\source\repos\Editor\Editor\bin\Debug\FigurePlugins.pdb
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.csproj.CopyComplete
+C:\Users\npofa\source\repos\Editor\Editor\obj\Debug\Editor.OptionsForm.resources

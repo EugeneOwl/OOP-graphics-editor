@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigurePlugins", "FigurePlugins\FigurePlugins.csproj", "{4D28162F-BC03-4012-8C8C-DC3217109726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csproj", "{159DBC88-BE7E-40FF-9D81-E9AA77068461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D28162F-BC03-4012-8C8C-DC3217109726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D28162F-BC03-4012-8C8C-DC3217109726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D28162F-BC03-4012-8C8C-DC3217109726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D28162F-BC03-4012-8C8C-DC3217109726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BC74193-4E89-43A3-9905-449B2A037C88}
+	EndGlobalSection
+EndGlobal
