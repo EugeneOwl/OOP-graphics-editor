@@ -7,9 +7,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
+[Serializable]
 public class Square : Figure
 {
-    private int xPosition, yPosition, sideSize;
+    public int xPosition, yPosition, sideSize;
 
     public Square() { }
 

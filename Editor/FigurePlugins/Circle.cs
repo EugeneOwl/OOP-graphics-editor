@@ -7,9 +7,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
+[Serializable]
 public class Circle : Figure
 {
-    private int radius, xPosition, yPosition;
+    public int radius, xPosition, yPosition;
 
     public Circle() { }
 

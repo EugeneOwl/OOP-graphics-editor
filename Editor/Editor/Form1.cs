@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Editor
 {
@@ -19,6 +21,54 @@ namespace Editor
         private List<Type> figureClasses;
         private List<Point> manualPoints;
         private Figure manualFigure;
+        string xmlFilePath = "C:\\Users\\npofa\\source\\repos\\Editor\\Editor\\data.xml";
+
+        private void SerializeAll()
+        {
+            ClearFile(this.xmlFilePath);
+            XmlSerializer serializer = CreateSerializer();
+            using (FileStream fs = new FileStream(this.xmlFilePath, FileMode.OpenOrCreate))
+            {
+                serializer.Serialize(fs, figures);
+            }
+        }
+
+        private void DeserializeAll()
+        {
+            if (!IsFileEmpty(xmlFilePath))
+            {
+                XmlSerializer serializer = CreateSerializer();
+                using (StreamReader fs = new StreamReader(xmlFilePath))
+                {
+                    figures = (List<Figure>)serializer.Deserialize(fs);
+                }
+            }
+            this.Invalidate();
+        }
+
+        private bool IsFileEmpty(string path)
+        {
+            return new FileInfo(path).Length == 0;
+        }
+
+        private XmlSerializer CreateSerializer()
+        {
+            Type[] types = new Type[figureClasses.Count];
+            for (int typeNumber = 0; typeNumber < figureClasses.Count; typeNumber++)
+            {
+                types[typeNumber] = figureClasses[typeNumber];
+            }
+            XmlSerializer serializer = new XmlSerializer(
+                typeof(List<Figure>),
+                types
+            );
+            return serializer;
+        }
+
+        private void ClearFile(string path)
+        {
+            File.WriteAllText(path, string.Empty);
+        }
 
         public Form1()
         {
@@ -138,11 +188,11 @@ namespace Editor
             }
             if (optionsForm.isNeedToBeDeserialized)
             {
-                //DeserializeAll();
+                DeserializeAll();
             }
             if (optionsForm.isNeedToBeSerialized)
             {
-                //SerializeAll();
+                SerializeAll();
             }
         }
 

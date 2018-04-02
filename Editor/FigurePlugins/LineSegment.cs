@@ -7,9 +7,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
+[Serializable]
 public class LineSegment : Figure
 {
-    private int xPosition, yPosition, xPosition2, yPosition2;
+    public int xPosition, yPosition, xPosition2, yPosition2;
 
     public LineSegment() { }
 
