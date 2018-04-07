@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Reflection;
 
+[assembly: AssemblyKeyFileAttribute("editor.snk")]//("figurePluginOwn.snk")]
 public abstract class Figure
 {
     abstract public GraphicsPath GetPath();

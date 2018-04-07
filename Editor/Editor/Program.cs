@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
+[assembly: AssemblyKeyFileAttribute("editor.snk")]
 namespace Editor
 {
     static class Program

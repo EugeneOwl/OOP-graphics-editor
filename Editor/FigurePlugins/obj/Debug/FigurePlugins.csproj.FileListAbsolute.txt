@@ -4,3 +4,9 @@ C:\Users\npofa\source\repos\Editor\FigurePlugins\obj\Debug\FigurePlugins.csprojR
 C:\Users\npofa\source\repos\Editor\FigurePlugins\obj\Debug\FigurePlugins.csproj.CoreCompileInputs.cache
 C:\Users\npofa\source\repos\Editor\FigurePlugins\obj\Debug\FigurePlugins.dll
 C:\Users\npofa\source\repos\Editor\FigurePlugins\obj\Debug\FigurePlugins.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\bin\Debug\FigurePlugins.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\bin\Debug\FigurePlugins.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.csprojResolveAssemblyReference.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.csproj.CoreCompileInputs.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.pdb

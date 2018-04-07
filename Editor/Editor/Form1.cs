@@ -21,7 +21,23 @@ namespace Editor
         private List<Type> figureClasses;
         private List<Point> manualPoints;
         private Figure manualFigure;
-        string xmlFilePath = "C:\\Users\\npofa\\source\\repos\\Editor\\Editor\\data.xml";
+        private string xmlFilePath = "C:\\Users\\npofa\\source\\repos\\Editor\\Editor\\data.xml";
+        private string assemblyName = "FigurePlugins";
+        
+        private bool CheckSignature()
+        {
+            Assembly loaded = Assembly.Load("FigurePlugins");
+
+            byte[] evidenceKey = loaded.GetName().GetPublicKey();
+
+            if (evidenceKey != null)
+            {
+                byte[] internalKey = Assembly.GetExecutingAssembly().GetName().GetPublicKey();
+                if (evidenceKey.SequenceEqual(internalKey))
+                    return true;
+            }
+            return false;
+        }
 
         private void SerializeAll()
         {
@@ -73,19 +89,21 @@ namespace Editor
         public Form1()
         {
             InitializeComponent();
-
-            lastRadiobuttonY = 25;
-            figures = new List<Figure>();
-            radioButtons = new List<RadioButton>();
-            figureClasses = new List<Type>();
-            manualPoints = new List<Point>();
-            GetListOfFigureClasses();
-            FillRadioButtonList();
+            if (CheckSignature())
+            {
+                lastRadiobuttonY = 25;
+                figures = new List<Figure>();
+                radioButtons = new List<RadioButton>();
+                figureClasses = new List<Type>();
+                manualPoints = new List<Point>();
+                GetListOfFigureClasses();
+                FillRadioButtonList();
+            }
         }
 
         private void GetListOfFigureClasses()
         {
-            Assembly a = Assembly.Load("FigurePlugins");
+            Assembly a = Assembly.Load(assemblyName);
             Type[] types = a.GetTypes();
             foreach (Type type in types)
             {
@@ -119,10 +137,9 @@ namespace Editor
 
         private void DrawRadioButtons()
         {
-            foreach(RadioButton radioButton in radioButtons)
-            {
-                this.Controls.Add(radioButton);
-            }
+            if (radioButtons != null)
+                foreach (RadioButton radioButton in radioButtons)
+                    this.Controls.Add(radioButton);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -139,7 +156,7 @@ namespace Editor
             }
         }
 
-        private int[] getManualDrawingParametersArray()
+        private int[] GetManualDrawingParametersArray()
         {
             int[] parameters = new int[6];
             parameters[0] = manualPoints[0].X;
@@ -159,7 +176,7 @@ namespace Editor
                 if (manualPoints.Count == 3)
                 {
                     Object[] packedParameters = new Object[1];
-                    packedParameters[0] = getManualDrawingParametersArray();
+                    packedParameters[0] = GetManualDrawingParametersArray();
 
                     MethodInfo SetManualParameters = manualFigure.GetType().GetMethod("SetManualParameters");
                     SetManualParameters.Invoke(manualFigure, packedParameters);
@@ -175,24 +192,27 @@ namespace Editor
 
         private void optionsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            OptionsForm optionsForm = new OptionsForm(this.figures.Count);
-            optionsForm.ShowDialog();
-            if (optionsForm.isValidToDelete && optionsForm.GetDeletedNumber() != -1)
+            if (figures != null)
             {
-                figures.RemoveAt(optionsForm.GetDeletedNumber());
-                this.Invalidate();
-            }
-            if (optionsForm.isValidToEdit && optionsForm.GetEditedNumber() != -1)
-            {
-                EditFigureByNumber(optionsForm.GetEditedNumber());
-            }
-            if (optionsForm.isNeedToBeDeserialized)
-            {
-                DeserializeAll();
-            }
-            if (optionsForm.isNeedToBeSerialized)
-            {
-                SerializeAll();
+                OptionsForm optionsForm = new OptionsForm(this.figures.Count);
+                optionsForm.ShowDialog();
+                if (optionsForm.isValidToDelete && optionsForm.GetDeletedNumber() != -1)
+                {
+                    figures.RemoveAt(optionsForm.GetDeletedNumber());
+                    this.Invalidate();
+                }
+                if (optionsForm.isValidToEdit && optionsForm.GetEditedNumber() != -1)
+                {
+                    EditFigureByNumber(optionsForm.GetEditedNumber());
+                }
+                if (optionsForm.isNeedToBeDeserialized)
+                {
+                    DeserializeAll();
+                }
+                if (optionsForm.isNeedToBeSerialized)
+                {
+                    SerializeAll();
+                }
             }
         }
 
