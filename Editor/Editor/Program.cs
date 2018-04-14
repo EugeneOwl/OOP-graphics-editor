@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 
-[assembly: AssemblyKeyFileAttribute("editor.snk")]
+[assembly: AssemblyKeyFileAttribute("newOrigin.snk")]
 namespace Editor
 {
     static class Program

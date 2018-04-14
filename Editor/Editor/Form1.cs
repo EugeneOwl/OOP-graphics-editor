@@ -21,7 +21,7 @@ namespace Editor
         private List<Type> figureClasses;
         private List<Point> manualPoints;
         private Figure manualFigure;
-        private string xmlFilePath = "C:\\Users\\npofa\\source\\repos\\Editor\\Editor\\data.xml";
+        private string xmlFilePath = "C:\\Users\\npofa\\source\\repos\\OOP\\OOP-graphics-editor\\Editor\\Editor\\data.xml";
         private string assemblyName = "FigurePlugins";
         
         private bool CheckSignature()

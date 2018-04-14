@@ -1,14 +1,7 @@
 <?xml version="1.0"?>
 <ArrayOfFigure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Figure xsi:type="Circle">
-    <radius>112</radius>
-    <xPosition>244</xPosition>
-    <yPosition>92</yPosition>
-  </Figure>
-  <Figure xsi:type="LineSegment">
-    <xPosition>236</xPosition>
-    <yPosition>199</yPosition>
-    <xPosition2>379</xPosition2>
-    <yPosition2>89</yPosition2>
+  <Figure xsi:type="Cross">
+    <xPosition>274</xPosition>
+    <yPosition>84</yPosition>
   </Figure>
 </ArrayOfFigure>
