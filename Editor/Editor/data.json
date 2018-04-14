@@ -1,0 +1,1 @@
+{"$type":"System.Collections.Generic.List`1[[Figure, FigurePlugins]], mscorlib","$values":[{"$type":"Square, FigurePlugins","xPosition":210,"yPosition":105,"sideSize":139},{"$type":"Circle, FigurePlugins","radius":201,"xPosition":134,"yPosition":109},{"$type":"Cross, FigurePlugins","xPosition":156,"yPosition":208}]}

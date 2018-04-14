@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Xml.Serialization;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Editor
 {
@@ -22,7 +23,8 @@ namespace Editor
         private List<Type> figureClasses;
         private List<Point> manualPoints;
         private Figure manualFigure;
-        private string xmlFilePath = "C:\\Users\\npofa\\source\\repos\\OOP\\OOP-graphics-editor\\Editor\\Editor\\data.xml";
+        private const string xmlFilePath  = "C:\\Users\\npofa\\source\\repos\\OOP\\OOP-graphics-editor\\Editor\\Editor\\data.xml";
+        private const string jsonFilePath = "C:\\Users\\npofa\\source\\repos\\OOP\\OOP-graphics-editor\\Editor\\Editor\\data.json";
         private string assemblyName = "FigurePlugins";
         
         private bool CheckSignature()
@@ -40,27 +42,40 @@ namespace Editor
             return false;
         }
 
-        private void SerializeAll()
+        private void SerializeAllXML(string path = xmlFilePath)
         {
-            ClearFile(this.xmlFilePath);
-            XmlSerializer serializer = CreateSerializer();
-            using (FileStream fs = new FileStream(this.xmlFilePath, FileMode.OpenOrCreate))
+            ClearFile(path);
+            XmlSerializer serializer = CreateSerializerXML();
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
                 serializer.Serialize(fs, figures);
             }
         }
 
-        private void DeserializeAll()
+        private void DeserializeAllXML(string path = xmlFilePath)
         {
-            if (!IsFileEmpty(xmlFilePath))
+            if (!IsFileEmpty(path))
             {
-                XmlSerializer serializer = CreateSerializer();
-                using (StreamReader fs = new StreamReader(xmlFilePath))
+                XmlSerializer serializer = CreateSerializerXML();
+                using (StreamReader fs = new StreamReader(path))
                 {
                     figures = (List<Figure>)serializer.Deserialize(fs);
                 }
             }
-            this.Invalidate();
+        }
+
+        private void SerializeAllJSON(string path = jsonFilePath)
+        {
+            var jset = new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.All };
+            string json2 = JsonConvert.SerializeObject(figures, jset);
+            File.WriteAllText(path, json2);
+        }
+
+        private void DeserializeAllJSON(string path = jsonFilePath)
+        {
+            string json = File.ReadAllText(path);
+            var jset = new JsonSerializerSettings() { TypeNameHandling = TypeNameHandling.All };
+            figures = (List<Figure>)JsonConvert.DeserializeObject(json, jset);
         }
 
         private bool IsFileEmpty(string path)
@@ -68,7 +83,7 @@ namespace Editor
             return new FileInfo(path).Length == 0;
         }
 
-        private XmlSerializer CreateSerializer()
+        private XmlSerializer CreateSerializerXML()
         {
             Type[] types = new Type[figureClasses.Count];
             for (int typeNumber = 0; typeNumber < figureClasses.Count; typeNumber++)
@@ -202,7 +217,6 @@ namespace Editor
                 if (optionsForm.isValidToDelete && optionsForm.GetDeletedNumber() != -1)
                 {
                     figures.RemoveAt(optionsForm.GetDeletedNumber());
-                    this.Invalidate();
                 }
                 if (optionsForm.isValidToEdit && optionsForm.GetEditedNumber() != -1)
                 {
@@ -210,14 +224,21 @@ namespace Editor
                 }
                 if (optionsForm.isNeedToBeDeserialized)
                 {
-                    DeserializeAll();
+                    if (serializingMode == 1)
+                        DeserializeAllXML();
+                    else if (serializingMode == 2)
+                        DeserializeAllJSON();
                     this.label1.Text = "Deserializing to " + serializingMode;
                 }
                 if (optionsForm.isNeedToBeSerialized)
                 {
-                    SerializeAll();
+                    if (serializingMode == 1)
+                        SerializeAllXML();
+                    else if (serializingMode == 2)
+                        SerializeAllJSON();
                     this.label1.Text = "Serializing to " + serializingMode;
                 }
+                this.Invalidate();
             }
         }
 

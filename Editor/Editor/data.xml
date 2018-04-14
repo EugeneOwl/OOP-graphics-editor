@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <ArrayOfFigure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Figure xsi:type="Cross">
-    <xPosition>274</xPosition>
-    <yPosition>84</yPosition>
+  <Figure xsi:type="LineSegment">
+    <xPosition>100</xPosition>
+    <yPosition>216</yPosition>
+    <xPosition2>278</xPosition2>
+    <yPosition2>281</yPosition2>
   </Figure>
 </ArrayOfFigure>

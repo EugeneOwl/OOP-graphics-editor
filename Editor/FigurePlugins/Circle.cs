@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Runtime.Serialization;
 
+[DataContract]
 [Serializable]
 public class Circle : Figure
 {
+    [DataMember]
     public int radius, xPosition, yPosition;
 
     public Circle() { }
