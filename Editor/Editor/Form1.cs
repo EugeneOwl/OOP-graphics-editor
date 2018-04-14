@@ -16,6 +16,7 @@ namespace Editor
     public partial class Form1 : Form
     {
         private int lastRadiobuttonY;
+        private int serializingMode;
         private List<Figure> figures;
         private List<RadioButton> radioButtons;
         private List<Type> figureClasses;
@@ -92,6 +93,7 @@ namespace Editor
             if (CheckSignature())
             {
                 lastRadiobuttonY = 25;
+                serializingMode = 1;
                 figures = new List<Figure>();
                 radioButtons = new List<RadioButton>();
                 figureClasses = new List<Type>();
@@ -194,8 +196,9 @@ namespace Editor
         {
             if (figures != null)
             {
-                OptionsForm optionsForm = new OptionsForm(this.figures.Count);
+                OptionsForm optionsForm = new OptionsForm(this.figures.Count, serializingMode);
                 optionsForm.ShowDialog();
+                serializingMode = optionsForm.GetSerializingMode();
                 if (optionsForm.isValidToDelete && optionsForm.GetDeletedNumber() != -1)
                 {
                     figures.RemoveAt(optionsForm.GetDeletedNumber());
@@ -208,10 +211,12 @@ namespace Editor
                 if (optionsForm.isNeedToBeDeserialized)
                 {
                     DeserializeAll();
+                    this.label1.Text = "Deserializing to " + serializingMode;
                 }
                 if (optionsForm.isNeedToBeSerialized)
                 {
                     SerializeAll();
+                    this.label1.Text = "Serializing to " + serializingMode;
                 }
             }
         }

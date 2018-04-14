@@ -13,14 +13,24 @@ namespace Editor
     public partial class OptionsForm : Form
     {
         public bool isValidToDelete, isValidToEdit, isNeedToBeSerialized, isNeedToBeDeserialized;
-        private int amount;
+        private int amount, serializingMode;
 
-        public OptionsForm(int amount)
+        public OptionsForm(int amount, int serializingMode)
         {
             this.amount = amount;
+            this.serializingMode = serializingMode;
             isValidToDelete = isValidToEdit = isNeedToBeDeserialized = isNeedToBeSerialized = false;
             InitializeComponent();
             this.label1.Text = amount + " objects drawn.";
+            if (serializingMode == 2)
+                this.radioButton2.Checked = true;
+            else
+                this.radioButton1.Checked = true;
+        }
+
+        public int GetSerializingMode()
+        {
+            return this.serializingMode;
         }
 
         public int GetDeletedNumber()
@@ -45,6 +55,16 @@ namespace Editor
                 result = -1;
             }
             return result;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            serializingMode = 1;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            serializingMode = 2;
         }
 
         private void button3_Click(object sender, EventArgs e)
