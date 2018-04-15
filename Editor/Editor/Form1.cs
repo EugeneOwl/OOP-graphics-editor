@@ -31,14 +31,23 @@ namespace Editor
         {
             Assembly loaded = Assembly.Load("FigurePlugins");
 
+            if (loaded.IsFullyTrusted)
+                label2.Text = "The assembly is fully trusted.";
+            label1.Text = loaded.FullName.ToString();
+            //label2.Text += " + " + loaded.GetName().Version.ToString();
+
             byte[] evidenceKey = loaded.GetName().GetPublicKey();
 
             if (evidenceKey != null)
             {
                 byte[] internalKey = Assembly.GetExecutingAssembly().GetName().GetPublicKey();
                 if (evidenceKey.SequenceEqual(internalKey))
+                {
+                    label3.Text = "The assembly's public key is equal to original.";
                     return true;
+                }
             }
+            label3.Text = "The assembly's public key is NOT equal to original.";
             return false;
         }
 
@@ -228,7 +237,6 @@ namespace Editor
                         DeserializeAllXML();
                     else if (serializingMode == 2)
                         DeserializeAllJSON();
-                    this.label1.Text = "Deserializing to " + serializingMode;
                 }
                 if (optionsForm.isNeedToBeSerialized)
                 {
@@ -236,7 +244,6 @@ namespace Editor
                         SerializeAllXML();
                     else if (serializingMode == 2)
                         SerializeAllJSON();
-                    this.label1.Text = "Serializing to " + serializingMode;
                 }
                 this.Invalidate();
             }

@@ -1,9 +1,30 @@
 <?xml version="1.0"?>
 <ArrayOfFigure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Figure xsi:type="LineSegment">
-    <xPosition>100</xPosition>
+  <Figure xsi:type="Triangle">
+    <xPosition>85</xPosition>
+    <yPosition>243</yPosition>
+    <xPosition2>189</xPosition2>
+    <yPosition2>171</yPosition2>
+    <xPosition3>240</xPosition3>
+    <yPosition3>240</yPosition3>
+  </Figure>
+  <Figure xsi:type="Square">
+    <xPosition>210</xPosition>
+    <yPosition>116</yPosition>
+    <sideSize>100</sideSize>
+  </Figure>
+  <Figure xsi:type="Cross">
+    <xPosition>260</xPosition>
+    <yPosition>166</yPosition>
+  </Figure>
+  <Figure xsi:type="Cross">
+    <xPosition>169</xPosition>
     <yPosition>216</yPosition>
-    <xPosition2>278</xPosition2>
-    <yPosition2>281</yPosition2>
+  </Figure>
+  <Figure xsi:type="LineSegment">
+    <xPosition>375</xPosition>
+    <yPosition>65</yPosition>
+    <xPosition2>224</xPosition2>
+    <yPosition2>74</yPosition2>
   </Figure>
 </ArrayOfFigure>

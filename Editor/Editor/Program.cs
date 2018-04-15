@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 
-[assembly: AssemblyKeyFileAttribute("newOrigin.snk")]
+[assembly: AssemblyKeyFileAttribute("newOrigin.snk")]//figurePluginOwn
 namespace Editor
 {
     static class Program
