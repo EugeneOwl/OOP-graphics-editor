@@ -13,18 +13,18 @@
     <yPosition>116</yPosition>
     <sideSize>100</sideSize>
   </Figure>
-  <Figure xsi:type="Cross">
-    <xPosition>260</xPosition>
-    <yPosition>166</yPosition>
+  <Figure xsi:type="Rectangle">
+    <xPosition>162</xPosition>
+    <yPosition>131</yPosition>
+    <horizon>210</horizon>
+    <vertical>54</vertical>
   </Figure>
-  <Figure xsi:type="Cross">
-    <xPosition>169</xPosition>
-    <yPosition>216</yPosition>
-  </Figure>
-  <Figure xsi:type="LineSegment">
-    <xPosition>375</xPosition>
-    <yPosition>65</yPosition>
-    <xPosition2>224</xPosition2>
-    <yPosition2>74</yPosition2>
+  <Figure xsi:type="Triangle">
+    <xPosition>112</xPosition>
+    <yPosition>179</yPosition>
+    <xPosition2>204</xPosition2>
+    <yPosition2>65</yPosition2>
+    <xPosition3>248</xPosition3>
+    <yPosition3>197</yPosition3>
   </Figure>
 </ArrayOfFigure>
