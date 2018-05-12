@@ -34,7 +34,6 @@ namespace Editor
             if (loaded.IsFullyTrusted)
                 label2.Text = "The assembly is fully trusted.";
             label1.Text = loaded.FullName.ToString();
-            //label2.Text += " + " + loaded.GetName().Version.ToString();
 
             byte[] evidenceKey = loaded.GetName().GetPublicKey();
 
@@ -133,7 +132,7 @@ namespace Editor
             Type[] types = a.GetTypes();
             foreach (Type type in types)
             {
-                if (type.IsSubclassOf(typeof(Figure)))
+                if (type.IsSubclassOf(typeof(FigureFactory)))
                 {
                     figureClasses.Add(type);
                 }
@@ -155,7 +154,8 @@ namespace Editor
             radioButton.Text = type.ToString();
             radioButton.MouseUp += (sender, e) =>
             {
-                manualFigure  = (Figure)Activator.CreateInstance(type);
+                FigureFactory figureFactory = (FigureFactory)Activator.CreateInstance(type);
+                manualFigure = new Figure(figureFactory);
             };
             radioButtons.Add(radioButton);
             lastRadiobuttonY += 25;
@@ -173,7 +173,7 @@ namespace Editor
             DrawRadioButtons();
             if (figures != null)
             {
-                Drawer drawer = new Drawer();
+                Drawer drawer = Drawer.GetInstance;
 
                 foreach (Figure figure in figures)
                 {

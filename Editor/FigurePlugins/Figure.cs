@@ -7,11 +7,31 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Reflection;
+using System.Runtime.Serialization;
 
 [assembly: AssemblyKeyFileAttribute("newOrigin.snk")]//("figurePluginOwn.snk")] newOrigin
-public abstract class Figure
+[DataContract]
+[Serializable]
+public class Figure
 {
-    abstract public GraphicsPath GetPath();
-    abstract public void SetManualParameters(int[] values);
+    [DataMember]
+    public FigureFactory undermaskFactory;
+
+    public Figure() { }
+
+    public Figure(FigureFactory factory)
+    {
+        undermaskFactory = factory;
+    }
+
+    public GraphicsPath GetPath()
+    {
+        return undermaskFactory.GetPathFactory();
+    }
+
+    public void SetManualParameters(int[] values)
+    {
+        undermaskFactory.SetManualParametersFactory(values);
+    }
 }
 
