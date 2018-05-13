@@ -10,3 +10,6 @@ C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Deb
 C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.csproj.CoreCompileInputs.cache
 C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.dll
 C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\bin\Debug\Rules.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\bin\Debug\Rules.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\FigurePlugins\obj\Debug\FigurePlugins.csproj.CopyComplete

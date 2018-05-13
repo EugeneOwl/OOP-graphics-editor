@@ -28,3 +28,7 @@ C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\obj\Debug\Edit
 C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\obj\Debug\Editor.pdb
 C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\bin\Debug\Newtonsoft.Json.dll
 C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\bin\Debug\ExternalFigurePlugins.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\bin\Debug\Rules.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\bin\Debug\ExternalFigurePlugins.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Editor\bin\Debug\Rules.pdb

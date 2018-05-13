@@ -26,6 +26,7 @@ namespace Editor
         private const string xmlFilePath  = "C:\\Users\\npofa\\source\\repos\\OOP\\OOP-graphics-editor\\Editor\\Editor\\data.xml";
         private const string jsonFilePath = "C:\\Users\\npofa\\source\\repos\\OOP\\OOP-graphics-editor\\Editor\\Editor\\data.json";
         private string assemblyName = "FigurePlugins";
+        private string externalAssemblyName = "ExternalFigurePlugins";
         
         private bool CheckSignature()
         {
@@ -128,11 +129,30 @@ namespace Editor
 
         private void GetListOfFigureClasses()
         {
+            GetListOfInnerFigureClesses();
+            GetListOfExternalFigurePlugins();
+        }
+
+        private void GetListOfInnerFigureClesses()
+        {
             Assembly a = Assembly.Load(assemblyName);
             Type[] types = a.GetTypes();
             foreach (Type type in types)
             {
                 if (type.IsSubclassOf(typeof(FigureFactory)))
+                {
+                    figureClasses.Add(type);
+                }
+            }
+        }
+
+        private void GetListOfExternalFigurePlugins()
+        {
+            Assembly a = Assembly.Load(externalAssemblyName);
+            Type[] types = a.GetTypes();
+            foreach (Type type in types)
+            {
+                if (type.IsSubclassOf(typeof(ExternalFigureFactory)))
                 {
                     figureClasses.Add(type);
                 }
@@ -154,7 +174,15 @@ namespace Editor
             radioButton.Text = type.ToString();
             radioButton.MouseUp += (sender, e) =>
             {
-                FigureFactory figureFactory = (FigureFactory)Activator.CreateInstance(type);
+                FigureFactory figureFactory;
+                ExternalFigureFactory externalFigureFactory;
+                if (type.IsSubclassOf(typeof(ExternalFigureFactory)))
+                {
+                    externalFigureFactory = (ExternalFigureFactory)Activator.CreateInstance(type);
+                    figureFactory = new ExternalToInnerFactoryAdapter(externalFigureFactory);
+                }
+                else
+                    figureFactory = (FigureFactory)Activator.CreateInstance(type);
                 manualFigure = new Figure(figureFactory);
             };
             radioButtons.Add(radioButton);

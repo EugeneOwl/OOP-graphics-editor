@@ -44,9 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleFactory.cs" />
-    <Compile Include="Figure.cs" />
-    <Compile Include="FigureFactory.cs" />
+    <Compile Include="LineSegmentFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signed.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rules\Rules.csproj">
+      <Project>{01c5b833-8a15-4065-819d-481a7934593f}</Project>
+      <Name>Rules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,6 @@
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Rules\obj\Debug\Rules.csprojResolveAssemblyReference.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Rules\obj\Debug\Rules.csproj.CoreCompileInputs.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Rules\bin\Debug\Rules.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Rules\bin\Debug\Rules.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Rules\obj\Debug\Rules.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\Rules\obj\Debug\Rules.pdb

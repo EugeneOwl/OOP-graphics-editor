@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigurePlugins", "FigurePlug
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csproj", "{159DBC88-BE7E-40FF-9D81-E9AA77068461}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalFigurePlugins", "ExternalFigurePlugins\ExternalFigurePlugins.csproj", "{5AD6E0B4-0208-4F31-92A1-28E08459A090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules", "Rules\Rules.csproj", "{01C5B833-8A15-4065-819D-481A7934593F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{159DBC88-BE7E-40FF-9D81-E9AA77068461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD6E0B4-0208-4F31-92A1-28E08459A090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD6E0B4-0208-4F31-92A1-28E08459A090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD6E0B4-0208-4F31-92A1-28E08459A090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD6E0B4-0208-4F31-92A1-28E08459A090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C5B833-8A15-4065-819D-481A7934593F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C5B833-8A15-4065-819D-481A7934593F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C5B833-8A15-4065-819D-481A7934593F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C5B833-8A15-4065-819D-481A7934593F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

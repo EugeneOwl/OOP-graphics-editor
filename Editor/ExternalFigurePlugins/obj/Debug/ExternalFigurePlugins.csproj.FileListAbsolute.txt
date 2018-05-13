@@ -1,0 +1,11 @@
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.csprojResolveAssemblyReference.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.Properties.Resources.resources
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.csproj.GenerateResource.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.csproj.CoreCompileInputs.cache
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\bin\Debug\ExternalFigurePlugins.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\bin\Debug\ExternalFigurePlugins.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\bin\Debug\Rules.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\bin\Debug\Rules.pdb
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.csproj.CopyComplete
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.dll
+C:\Users\npofa\source\repos\OOP\OOP-graphics-editor\Editor\ExternalFigurePlugins\obj\Debug\ExternalFigurePlugins.pdb
