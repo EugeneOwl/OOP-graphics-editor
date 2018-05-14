@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ArrayOfFigure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Figure>
+    <undermaskFactory xsi:type="CircleFactory">
+      <radius>76</radius>
+      <xPosition>267</xPosition>
+      <yPosition>101</yPosition>
+    </undermaskFactory>
+  </Figure>
+  <Figure>
+    <undermaskFactory xsi:type="CircleFactory">
+      <radius>68</radius>
+      <xPosition>345</xPosition>
+      <yPosition>104</yPosition>
+    </undermaskFactory>
+  </Figure>
+  <Figure>
+    <undermaskFactory xsi:type="CircleFactory">
+      <radius>6</radius>
+      <xPosition>313</xPosition>
+      <yPosition>157</yPosition>
+    </undermaskFactory>
+  </Figure>
+  <Figure>
+    <undermaskFactory xsi:type="CircleFactory">
+      <radius>9</radius>
+      <xPosition>361</xPosition>
+      <yPosition>157</yPosition>
+    </undermaskFactory>
+  </Figure>
+  <Figure>
+    <undermaskFactory xsi:type="LineSegmentFactory">
+      <xPosition>262</xPosition>
+      <yPosition>105</yPosition>
+      <xPosition2>332</xPosition2>
+      <yPosition2>79</yPosition2>
+    </undermaskFactory>
+  </Figure>
+  <Figure>
+    <undermaskFactory xsi:type="LineSegmentFactory">
+      <xPosition>377</xPosition>
+      <yPosition>82</yPosition>
+      <xPosition2>438</xPosition2>
+      <yPosition2>121</yPosition2>
+    </undermaskFactory>
+  </Figure>
+  <Figure>
+    <undermaskFactory xsi:type="ExternalToInnerFactoryAdapter">
+      <externalFigureFactory xsi:type="ExternalRectangleFactory">
+        <x>316</x>
+        <y>212</y>
+        <horizon>46</horizon>
+        <vertical>13</vertical>
+      </externalFigureFactory>
+    </undermaskFactory>
+  </Figure>
+</ArrayOfFigure>

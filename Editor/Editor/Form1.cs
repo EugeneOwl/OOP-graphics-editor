@@ -94,11 +94,12 @@ namespace Editor
 
         private XmlSerializer CreateSerializerXML()
         {
-            Type[] types = new Type[figureClasses.Count];
+            Type[] types = new Type[figureClasses.Count + 1];
             for (int typeNumber = 0; typeNumber < figureClasses.Count; typeNumber++)
             {
                 types[typeNumber] = figureClasses[typeNumber];
             }
+            types[figureClasses.Count] = typeof(ExternalToInnerFactoryAdapter);
             XmlSerializer serializer = new XmlSerializer(
                 typeof(List<Figure>),
                 types
